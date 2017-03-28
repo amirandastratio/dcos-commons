@@ -37,7 +37,7 @@ class HTTPPublisher(object):
         self._input_dir_path = input_dir_path
 
         self._http_dir = os.environ.get('HTTP_DIR', '/tmp/dcos-http-{}/'.format(self._pkg_name))
-        self._http_host = os.environ.get('HTTP_HOST', '172.17.0.1')
+        self._http_host = os.environ.get('HTTP_HOST', '172.19.1.228')
         self._http_port = int(os.environ.get('HTTP_PORT', '0'))
 
         self._github_updater = github_update.GithubStatusUpdater('upload:{}'.format(package_name))
